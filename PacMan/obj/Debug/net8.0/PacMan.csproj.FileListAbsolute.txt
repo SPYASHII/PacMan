@@ -1,0 +1,15 @@
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\bin\Debug\net8.0\PacMan.exe
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\bin\Debug\net8.0\PacMan.deps.json
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\bin\Debug\net8.0\PacMan.runtimeconfig.json
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\bin\Debug\net8.0\PacMan.dll
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\bin\Debug\net8.0\PacMan.pdb
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\PacMan.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\PacMan.AssemblyInfoInputs.cache
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\PacMan.AssemblyInfo.cs
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\PacMan.csproj.CoreCompileInputs.cache
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\PacMan.sourcelink.json
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\PacMan.dll
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\refint\PacMan.dll
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\PacMan.pdb
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\PacMan.genruntimeconfig.cache
+G:\Programming\CBS\3 course (Essential)\PacMan\PacMan\obj\Debug\net8.0\ref\PacMan.dll
