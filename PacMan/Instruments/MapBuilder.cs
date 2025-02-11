@@ -10,11 +10,14 @@ using PacMan.Enums;
 
 namespace PacMan.Instruments
 {
+    //Строитель карты, на входе принимает чертёж карты, выдаёт массив с обьектами который
+    //по факту является картой
     internal class MapBuilder
     {
         public IEntity[,] BuildMap(MapBlueprint blueprint)
         {
-            IEntity[,] map = new IEntity[blueprint.LengthY,blueprint.LengthX];
+            //Не уверен нужны ли параметры длины, ведь можно использовать длину строки и массива :/
+            IEntity[,] map = new IEntity[blueprint.LengthY,blueprint.LengthX]; 
 
             FillMap(map, blueprint.Map);
 
@@ -33,6 +36,7 @@ namespace PacMan.Instruments
                 }
             }
         }
+        //Метод для интерпритации чертежа в обьекты
         private IEntity SelectEntity(char entityChar)
         {
             IEntity entity;
@@ -62,46 +66,6 @@ namespace PacMan.Instruments
             }
             return entity;
         }
-
-        //private void FillWithPoints(IEntity[,] map)
-        //{
-        //    for(int i = 0;  i < map.GetLength(0); i++)
-        //    {
-        //        for (int j = 0; j < map.GetLength(1); j++)
-        //        {
-        //            if (map[i, j] == null)
-        //                map.CreateAt(i, j, new Point());
-        //        }
-        //    }
-        //}
-        //private void CreateMapBorders(IEntity[,] map)
-        //{
-        //    map.CreateFromToX(0, 0, map.GetLength(1) - 1, new Wall());
-        //    map.CreateFromToX(map.GetLength(0) - 1, 0, map.GetLength(1) - 1, new Wall());
-
-        //    map.CreateFromToY(0, 0, map.GetLength(0) - 1, new Wall());
-        //    map.CreateFromToY(map.GetLength(1) - 1, 0, map.GetLength(0) - 1, new Wall());
-        //}
-        //private void CreateFromToY(IEntity[,] map, int x, int y, int y1, IEntity entity)
-        //{
-        //    int start = y < y1 ? y : y1;
-        //    int end = y == start ? y1 : y;
-
-        //    for(int i = start; i <= end; i++)
-        //    {
-        //        map.CreateAt(i, x, entity);
-        //    }
-        //}
-        //private void CreateFromToX(IEntity[,] map, int y, int x, int x1, IEntity entity)
-        //{
-        //    int start = x < x1 ? x : x1;
-        //    int end = x == start ? x1 : x;
-
-        //    for (int i = start; i <= end; i++)
-        //    {
-        //        map.CreateAt(y, i, entity);
-        //    }
-        //}
         private void CreateAt(IEntity[,] map, int y, int x, IEntity entity)
         {
             map[y, x] = entity;

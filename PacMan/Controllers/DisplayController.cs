@@ -9,11 +9,14 @@ using PacMan.Assets;
 
 namespace PacMan.Controllers
 {
+    //Контроллер визуала
     internal class DisplayController
     {
         private DisplayService _displayService = new DisplayService();
         public void DisplayAllMap(IEntity[,] map)
         {
+            Console.Clear();
+
             foreach (var entity in map)
             {
                 DisplayEntity(entity);

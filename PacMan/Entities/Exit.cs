@@ -13,7 +13,7 @@ namespace PacMan.Entities
         public Coordinates Coordinates { get; private set; }
         public void SetCoordinates(int x, int y)
         {
-            if (!Coordinates.isSet)
+            if (!Coordinates.isSet) //позиция не изменяется ни при каких условиях
                 Coordinates = new Coordinates(x, y);
         }
     }

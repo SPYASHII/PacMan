@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace PacMan.Controllers
 {
+    //Контроллер для управления уровнем/уровнями
     internal class LevelController
     {
         private MapsStorage _mapStorage;
@@ -53,6 +54,7 @@ namespace PacMan.Controllers
             return _currentLevel;
         }
 
+        //Вставить сущность в карту
         public void InsertEntity(IEntity entity)
         {
             var cords = entity.Coordinates;

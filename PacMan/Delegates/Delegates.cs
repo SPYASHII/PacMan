@@ -7,5 +7,6 @@ using System.Threading.Tasks;
 
 namespace PacMan.Delegates
 {
+    //Делегат для передачи метода-логики обработки взаимодействия сущностей (Усложнение?)
     internal delegate bool Collide(IEntity entity, IEntity entity1);
 }

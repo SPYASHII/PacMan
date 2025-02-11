@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace PacMan.Controllers
 {
+    //Контроллер Логики, по факту является самым главным
     internal class LogicController
     {
         private LevelController _levelController = new LevelController();
@@ -49,10 +50,11 @@ namespace PacMan.Controllers
 
             if (!exit)
             {
-                _levelController.InsertEntities(_entitiesChanged);
-                _displayController.DisplayEntities(_entitiesChanged);
+                //Обработка изменненных сущностей
+                _levelController.InsertEntities(_entitiesChanged); //Фактическое помещение на карту уровня
+                _displayController.DisplayEntities(_entitiesChanged); //Отображение
 
-                if(_levelPassed)
+                if (_levelPassed)
                 {
                     LevelLogic();
                 }
@@ -197,6 +199,7 @@ namespace PacMan.Controllers
 
             return move;
         }
+        //Метод для задания второй сущности координат первой + добавление в список измененных сущностей
         private void SecondTakePlaceOfFirst(IEntity first, IEntity second)
         {
             second.SetCoordinates(first.Coordinates.X, first.Coordinates.Y);

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace PacMan.Interfaces
 {
+    //Moveble не может быть не Entity ведь так?
     internal interface IMoveble : IEntity
     {
         Directions Direction { get; set; }

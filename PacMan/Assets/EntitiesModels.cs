@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PacMan.Assets
 {
+    //TODO: Сделать отдельный класс модели с цветом модели
     internal static class EntitiesModels
     {
         private static readonly char _wall = 'X';

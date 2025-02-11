@@ -12,6 +12,10 @@ using System.Threading.Tasks;
 
 namespace PacMan.Services
 {
+    //Очень интересный класс, вроде и нужный а вроде и спорный
+    //Пришлось использовать делегат ведь действия класса тесно связаны с тем что находиться в LogicController
+    //Если не использовать делегат то будет нагромождение в LogicController
+    //Хмммм
     internal class MovementLogicService
     {
         private Level Level { get; set; }
@@ -20,12 +24,6 @@ namespace PacMan.Services
         {
             Level = level;
             CollideLogic = collideLogic;
-        }
-        //TODO: доделать логику передвижения
-        //Посмотреть в тетрадь!
-        public void ChangeLevel(Level level)
-        {
-            Level = level;
         }
 
         public void PlayerMoveLogic()
@@ -47,13 +45,16 @@ namespace PacMan.Services
         }
         private void MoveLogic(IMoveble moveble)
         {
+            //Получает сущность с места куда планируется сделать шаг
             IEntity entity = GetEntityFromDirection(moveble.Direction, moveble.Coordinates);
 
-            bool move = CollideLogic(moveble, entity);
+            //Отправляет на обработку логике, получает сигнал двигаться/не двигаться
+            bool move = CollideLogic(moveble, entity); 
 
             if (move)
                 moveble.Move(Constants.movementStep);
         }
+        //Получение сущности с места куда планируется сделать шаг
         private IEntity GetEntityFromDirection(Directions dir, Coordinates coords)
         {
             switch (dir)
@@ -76,6 +77,7 @@ namespace PacMan.Services
 
             return Level.Map[coords.Y, coords.X];
         }
+        //Менять ли фактическое направление на то которое задаёт пользователь
         private void TryChangePlayerDirection()
         {
             IEntity entity;
@@ -85,6 +87,7 @@ namespace PacMan.Services
             {
                 entity = GetEntityFromDirection(player.NextDirection, player.Coordinates);
 
+                //При условии что в том направлении не стена - менять
                 if (entity.GetType() != typeof(Wall))
                     player.Direction = player.NextDirection;
             }

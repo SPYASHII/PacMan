@@ -8,30 +8,34 @@ using System.Threading.Tasks;
 
 namespace PacMan.Assets
 {
+    //Перечень заготовок для карт
+
+    //TODO: Подумать над тем нужна ли длинна указаная вручную
+
     //0 - enemy up/down movement
     //1 - enemy left/right movement
     internal static class Maps
     {
-        public static MapBlueprint Map2 = new MapBlueprint()
+        public static MapBlueprint Map1 = new MapBlueprint()
         {
             Map =
             [
-            "XXXXXXXXXX" ,
-            "X    XP 0X" ,
-            "XXX   XX X" ,
-            "X1  X X  X" ,
-            "XXX X XX X" ,
-            "X   X XX X" ,
-            "X   X    X" ,
-            "XXX XXX  X" ,
-            "XT  X1   X" ,
-            "XXXXXXXXXX" ,
+            " XXXXXXXXXXXX " ,
+            "X    XP 0    X" ,
+            "XXX   XX     X" ,
+            "X1  X X      X" ,
+            "XXX X XX     X" ,
+            "X   X XX     X" ,
+            "X   X        X" ,
+            "XXX XXX      X" ,
+            "XT  X1       X" ,
+            " XXXXXXXXXXXX " ,
             ],
 
-            LengthX = 10,
+            LengthX = 14,
             LengthY = 10,
         };
-        public static MapBlueprint Map1 = new MapBlueprint()
+        public static MapBlueprint Map2 = new MapBlueprint()
         {
             Map =
             [

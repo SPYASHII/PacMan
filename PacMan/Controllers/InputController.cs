@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace PacMan.Controllers
 {
+    //Контроллер ввода
     internal class InputController
     {
         public Controls GetControl()

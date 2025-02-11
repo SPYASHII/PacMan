@@ -16,8 +16,10 @@ namespace PacMan.Entities
         private Directions[] _directions = new Directions[2];
         private int _currentDir;
 
+        //Ссылок - 0, удалить?
         public Enemy() { }
         //Уже не подходит //поправка: Подходит?
+        //Вердикт: подходит :D
         public Enemy(Directions direction)
         {
             Direction = direction;
@@ -31,7 +33,9 @@ namespace PacMan.Entities
                 SetDirectionY();
             }
         }
-
+        //HACK: По сути идентичный с классом Player,
+        //может лучше сделать IMoveble абстрактным классом и реализовать в нём Move?
+        //Будет ли это считаться плохой практикой??
         public void Move(int step)
         {
             switch (Direction)
