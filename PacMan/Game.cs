@@ -1,5 +1,7 @@
 ﻿using PacMan.Assets;
 using PacMan.Controllers;
+using PacMan.Interfaces;
+using PacMan.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +12,15 @@ namespace PacMan
 {
     internal class Game
     {
-        private InputController _inputController = new InputController();
-        private LogicController _logicController = new LogicController();
+        private InputController _inputController;
+        private LogicController _logicController;
+        public Game()
+        {
+            IInputParse inputParser = new InputParserService();
+
+            _inputController = new InputController(inputParser);
+            _logicController = new LogicController();
+        }
         public void Start()
         {
             Console.CursorVisible = false;

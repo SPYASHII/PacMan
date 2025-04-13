@@ -14,13 +14,22 @@ namespace PacMan.Controllers
     //Контроллер Логики, по факту является самым главным
     internal class LogicController
     {
-        private LevelController _levelController = new LevelController();
-        private DisplayController _displayController = new DisplayController();
+        private LevelController _levelController;
+        private DisplayController _displayController;
         private MovementLogicService _movementLogic;
+
+        public LogicController()
+        {
+            IDisplayService displayService = new DisplayService();
+
+            _displayController = new DisplayController(displayService);
+            _levelController = new LevelController();
+        }
 
         //Лист существ которых нужно отобразить(которые подверглись изменениям)
         private List<IEntity> _entitiesChanged = new List<IEntity>();
 
+        public bool pause = false;
         public bool win = false;
         public bool exit = false;
         private bool _levelPassed = false;
@@ -41,29 +50,32 @@ namespace PacMan.Controllers
         //Логика каждой "итерации" игры
         public void ProcessLogic(Controls input)
         {
-            _entitiesChanged.Clear();
-
             HandleControls(input);
 
-            _movementLogic.PlayerMoveLogic();
-            _movementLogic.EnemyMoveLogic();
-
-            if (!exit)
+            if (!pause)
             {
-                //Обработка изменненных сущностей
-                _levelController.InsertEntities(_entitiesChanged); //Фактическое помещение на карту уровня
-                _displayController.DisplayEntities(_entitiesChanged); //Отображение
+                _entitiesChanged.Clear();
 
-                if (_levelPassed)
-                {
-                    LevelLogic();
-                }
+                _movementLogic.PlayerMoveLogic();
+                _movementLogic.EnemyMoveLogic();
 
-                if(win)
+                if (!exit)
                 {
-                    _displayController.DisplayWin();
-                    Console.ReadKey();
-                    win = false;
+                    //Обработка изменненных сущностей
+                    _levelController.InsertEntities(_entitiesChanged); //Фактическое помещение на карту уровня
+                    _displayController.DisplayEntities(_entitiesChanged); //Отображение
+
+                    if (_levelPassed)
+                    {
+                        LevelLogic();
+                    }
+
+                    if (win)
+                    {
+                        _displayController.DisplayWin();
+                        Console.ReadKey();
+                        win = false;
+                    }
                 }
             }
         }
@@ -71,7 +83,7 @@ namespace PacMan.Controllers
         {
             bool isNextLevel = _levelController.NextLevel();
 
-            if(isNextLevel)
+            if (isNextLevel)
                 Setup();
             else
                 win = true;
@@ -101,6 +113,11 @@ namespace PacMan.Controllers
                 case Controls.Restart:
                     _levelController.FirstLevel();
                     Setup();
+                    break;
+                case Controls.Pause:
+                    pause = !pause;
+                    break;
+                default:
                     break;
             }
         }

@@ -1,4 +1,5 @@
 ﻿using PacMan.Enums;
+using PacMan.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,49 +11,21 @@ namespace PacMan.Controllers
     //Контроллер ввода
     internal class InputController
     {
+        private IInputParse inputParser;
+
+        public InputController(IInputParse inputParser)
+        {
+            this.inputParser = inputParser;
+        }
         public Controls GetControl()
         {
             Controls control = Controls.None;
-            //HACK: Изменить на if
-            while (Console.KeyAvailable)
+            
+            if (Console.KeyAvailable)
             {
                 var key = Console.ReadKey(true);
 
-                control = ParseFromKeyToControl(key.Key);
-            }
-
-            return control;
-        }
-        private Controls ParseFromKeyToControl(ConsoleKey key)
-        {
-            Controls control;
-
-            switch (key)
-            {
-                case ConsoleKey.W:
-                    control = Controls.Up; 
-                    break;
-                case ConsoleKey.A:
-                    control = Controls.Left; 
-                    break;
-                case ConsoleKey.D:
-                    control = Controls.Right; 
-                    break;
-                case ConsoleKey.S:
-                    control = Controls.Down; 
-                    break;
-                case ConsoleKey.P:
-                    control = Controls.Pause; 
-                    break;
-                case ConsoleKey.Escape:
-                    control = Controls.Exit;
-                    break;
-                case ConsoleKey.Enter:
-                    control = Controls.Restart; 
-                    break;
-                default:
-                    control = Controls.None;
-                    break;
+                control = inputParser.ParseFromKeyToControl(key.Key);
             }
 
             return control;

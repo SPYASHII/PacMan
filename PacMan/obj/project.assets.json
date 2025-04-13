@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\nikita\\.nuget\\packages\\": {},
-    "G:\\VS\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\PacMan.csproj",
+      "projectUniqueName": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\PacMan.csproj",
       "projectName": "PacMan",
-      "projectPath": "G:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\PacMan.csproj",
-      "packagesPath": "C:\\Users\\nikita\\.nuget\\packages\\",
-      "outputPath": "G:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\obj\\",
+      "projectPath": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\PacMan.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "G:\\VS\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\nikita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -51,7 +51,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -72,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 
 namespace PacMan.Services
 {
-    //Сервис для отображения, по факту используеться только один метод
-    //Нужен ли он вообще, или я усложняю??
-    internal class DisplayService
+    internal class DisplayService : IDisplayService
     {
         public void DisplayAt(Coordinates cords, char model)
         {
@@ -21,6 +19,11 @@ namespace PacMan.Services
         public void DeleteAt(Coordinates cords)
         {
             DisplayAt(cords, ' ');
+        }
+        public void DisplayWin()
+        {
+            Console.Clear();
+            Console.WriteLine("You have won!");
         }
     }
 }

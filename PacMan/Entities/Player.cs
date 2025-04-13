@@ -14,24 +14,19 @@ namespace PacMan.Entities
         public Coordinates Coordinates { get; private set; }
         public Directions Direction { get; set; }
         public Directions NextDirection { get; set; }
+
+        private static readonly Dictionary<Directions, Action<Player, int>> _moveActions = new()
+        {
+            { Directions.Left, (p,s) => p.SetCoordinates(p.Coordinates.X - s, p.Coordinates.Y)},
+            { Directions.Right, (p,s) => p.SetCoordinates(p.Coordinates.X + s, p.Coordinates.Y)},
+            { Directions.Up, (p,s) => p.SetCoordinates(p.Coordinates.X, p.Coordinates.Y - s)},
+            { Directions.Down, (p,s) => p.SetCoordinates(p.Coordinates.X, p.Coordinates.Y + s)}
+        };
         public void Move(int step)
         {
-            switch (Direction)
+            if(_moveActions.TryGetValue(Direction, out var action))
             {
-                case Directions.Left:
-                    SetCoordinates(Coordinates.X - step, Coordinates.Y);
-                    break;
-                case Directions.Right:
-                    SetCoordinates(Coordinates.X + step, Coordinates.Y);
-                    break;
-                case Directions.Up:
-                    SetCoordinates(Coordinates.X, Coordinates.Y - step);
-                    break;
-                case Directions.Down:
-                    SetCoordinates(Coordinates.X, Coordinates.Y + step);
-                    break;
-                default:
-                    break;
+                action(this, step);
             }
         }
         public void SetCoordinates(int x, int y)

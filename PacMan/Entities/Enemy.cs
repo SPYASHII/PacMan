@@ -14,7 +14,7 @@ namespace PacMan.Entities
         public Coordinates Coordinates { get; private set; }
         public Directions Direction { get; set; }
         private Directions[] _directions = new Directions[2];
-        private int _currentDir;
+        private int _directionSwitch; //Переменная для смены направления например: Вверх/Вниз
 
         //Ссылок - 0, удалить?
         public Enemy() { }
@@ -36,31 +36,26 @@ namespace PacMan.Entities
         //HACK: По сути идентичный с классом Player,
         //может лучше сделать IMoveble абстрактным классом и реализовать в нём Move?
         //Будет ли это считаться плохой практикой??
+        private static readonly Dictionary<Directions, Action<Enemy, int>> _moveActions = new()
+        {
+            { Directions.Left, (p,s) => p.SetCoordinates(p.Coordinates.X - s, p.Coordinates.Y)},
+            { Directions.Right, (p,s) => p.SetCoordinates(p.Coordinates.X + s, p.Coordinates.Y)},
+            { Directions.Up, (p,s) => p.SetCoordinates(p.Coordinates.X, p.Coordinates.Y - s)},
+            { Directions.Down, (p,s) => p.SetCoordinates(p.Coordinates.X, p.Coordinates.Y + s)}
+        };
+
         public void Move(int step)
         {
-            switch (Direction)
+            if (_moveActions.TryGetValue(Direction, out var action))
             {
-                case Directions.Left:
-                    SetCoordinates(Coordinates.X - step, Coordinates.Y);
-                    break;
-                case Directions.Right:
-                    SetCoordinates(Coordinates.X + step, Coordinates.Y);
-                    break;
-                case Directions.Up:
-                    SetCoordinates(Coordinates.X, Coordinates.Y - step);
-                    break;
-                case Directions.Down:
-                    SetCoordinates(Coordinates.X, Coordinates.Y + step);
-                    break;
-                default:
-                    break;
+                action(this, step);
             }
         }
         public void SetDirectionX()
         {
             Direction = Directions.Right;
 
-            _currentDir = 0;
+            _directionSwitch = 0;
             _directions[0] = Directions.Right;
             _directions[1] = Directions.Left;
         }
@@ -68,18 +63,18 @@ namespace PacMan.Entities
         {
             Direction = Directions.Down;
 
-            _currentDir = 0;
+            _directionSwitch = 0;
             _directions[0] = Directions.Down;
             _directions[1] = Directions.Up;
         }
         public void ChangeDirection()
         {
-            if (_currentDir + 1 == _directions.Length)
-                _currentDir = 0;
+            if (_directionSwitch + 1 == _directions.Length)
+                _directionSwitch = 0;
             else
-                _currentDir++;
+                _directionSwitch++;
 
-            Direction = _directions[_currentDir];
+            Direction = _directions[_directionSwitch];
         }
         public void SetCoordinates(int x, int y)
         {

@@ -6,13 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using PacMan.Services;
 using PacMan.Assets;
+using System.Security.Cryptography.X509Certificates;
 
 namespace PacMan.Controllers
 {
     //Контроллер визуала
     internal class DisplayController
     {
-        private DisplayService _displayService = new DisplayService();
+        private IDisplayService _displayService;
+
+        public DisplayController(IDisplayService displayService)
+        {
+            _displayService = displayService;
+        }
+
         public void DisplayAllMap(IEntity[,] map)
         {
             Console.Clear();
@@ -37,8 +44,7 @@ namespace PacMan.Controllers
         }
         public void DisplayWin()
         {
-            Console.Clear();
-            Console.WriteLine("You have won!");
+            _displayService.DisplayWin();
         }
     }
 }
