@@ -1,12 +1,15 @@
 ﻿using PacMan.Assets;
+using PacMan.Constants;
 using PacMan.Controllers;
 using PacMan.Enums;
+using PacMan.Instruments;
 using PacMan.Interfaces;
 using PacMan.Managers;
 using PacMan.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,12 +17,20 @@ namespace PacMan
 {
     internal class Game
     {
+        //TODO: ДОБАВИТЬ ТАЙМЕР, ПОИНТЫ ЗА УРОВЕНЬ(ВОЗМОЖНО УБРАТЬ), ЗАГРУЗКУ КАРТ С ФАЙЛОВ
         private InputController _inputController;
         private LogicController _logicController;
         private GameStateManager _gameStateManager;
         public Game()
         {
             IInputParse inputParser = new InputParserService();
+
+            ModelsLoader loader = new ModelsLoader();
+
+            Model[] models = loader.LoadModelsFromDir(AssetsPathes.ModelsDir);
+
+            //должен инициализироватся перед созданием logicController
+            EntitiesModels.Init(models);
 
             _gameStateManager = new GameStateManager();
 

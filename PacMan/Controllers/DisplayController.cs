@@ -14,10 +14,14 @@ namespace PacMan.Controllers
     internal class DisplayController
     {
         private IDisplayService _displayService;
+        private EntitiesModels _entitiesModels;
 
         public DisplayController(IDisplayService displayService)
         {
             _displayService = displayService;
+            _entitiesModels = EntitiesModels.GetInstance(out bool notNull);
+
+            Console.SetBufferSize(Console.BufferWidth + 100, Console.BufferHeight + 100);
         }
 
         public void DisplayAllMap(IEntity[,] map)
@@ -38,7 +42,7 @@ namespace PacMan.Controllers
         }
         public void DisplayEntity(IEntity entity)
         {
-            char model = EntitiesModels.GetModel(entity);
+            Model model = _entitiesModels.GetModel(entity);
 
             _displayService.DisplayAt(entity.Coordinates, model);
         }

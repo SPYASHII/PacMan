@@ -20,10 +20,10 @@ namespace PacMan.Storages
         private MapsStorage()
         {
             IEntity[,] map1 = _mapBuilder.BuildMap(Maps.Map1); //Мб сделать yield return в классе Maps?
-            //IEntity[,] map2 = _mapBuilder.BuildMap(Maps.Map2); //Чтобы не нагромождать этот класс ручным кодом
+            IEntity[,] map2 = _mapBuilder.BuildMap(Maps.Map2); //Чтобы не нагромождать этот класс ручным кодом
 
             _maps.Add(map1);
-            //_maps.Add(map2);
+            _maps.Add(map2);
         }
 
         public static MapsStorage GetInstance()

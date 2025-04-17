@@ -7,16 +7,44 @@
       "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\controllers\\logiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\constants\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\constants\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\assets\\entitiesmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\assets\\entitiesmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\instruments\\modelsloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\instruments\\modelsloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\storages\\mapsstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\storages\\mapsstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\controllers\\inputcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\controllers\\inputcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\constants\\assetspathes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\constants\\assetspathes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\services\\displayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\services\\displayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\controllers\\displaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\controllers\\displaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\interfaces\\idisplaymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\interfaces\\idisplaymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\assets\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\assets\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,19 +54,33 @@
       "DocumentGroups": [
         {
           "DockedHeight": 681,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LogicController.cs",
-              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\LogicController.cs",
-              "RelativeDocumentMoniker": "PacMan\\Controllers\\LogicController.cs",
-              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\LogicController.cs",
-              "RelativeToolTip": "PacMan\\Controllers\\LogicController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAqwFUAAAANAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "EntitiesModels.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Assets\\EntitiesModels.cs",
+              "RelativeDocumentMoniker": "PacMan\\Assets\\EntitiesModels.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Assets\\EntitiesModels.cs",
+              "RelativeToolTip": "PacMan\\Assets\\EntitiesModels.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAjwDEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T12:57:36.218Z",
+              "WhenOpened": "2025-04-17T18:56:56.116Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModelsLoader.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Instruments\\ModelsLoader.cs",
+              "RelativeDocumentMoniker": "PacMan\\Instruments\\ModelsLoader.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Instruments\\ModelsLoader.cs",
+              "RelativeToolTip": "PacMan\\Instruments\\ModelsLoader.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAADgvzEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T19:22:27.8Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -48,41 +90,119 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DisplayService.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Services\\DisplayService.cs",
+              "RelativeDocumentMoniker": "PacMan\\Services\\DisplayService.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Services\\DisplayService.cs",
+              "RelativeToolTip": "PacMan\\Services\\DisplayService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAswBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T18:43:03.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IDisplayModel.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Interfaces\\IDisplayModel.cs",
+              "RelativeDocumentMoniker": "PacMan\\Interfaces\\IDisplayModel.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Interfaces\\IDisplayModel.cs",
+              "RelativeToolTip": "PacMan\\Interfaces\\IDisplayModel.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAnwAwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T21:06:03.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MapsStorage.cs",
-              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Storages\\MapsStorage.cs",
-              "RelativeDocumentMoniker": "PacMan\\Storages\\MapsStorage.cs",
-              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Storages\\MapsStorage.cs",
-              "RelativeToolTip": "PacMan\\Storages\\MapsStorage.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:18:08.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InputController.cs",
-              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\InputController.cs",
-              "RelativeDocumentMoniker": "PacMan\\Controllers\\InputController.cs",
-              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\InputController.cs",
-              "RelativeToolTip": "PacMan\\Controllers\\InputController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAYwC8AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:45:18.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Game.cs",
               "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Game.cs",
               "RelativeDocumentMoniker": "PacMan\\Game.cs",
               "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Game.cs",
               "RelativeToolTip": "PacMan\\Game.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAmwCUAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAADgvzkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T14:10:01.134Z",
+              "WhenOpened": "2025-04-17T21:25:55.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LogicController.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\LogicController.cs",
+              "RelativeDocumentMoniker": "PacMan\\Controllers\\LogicController.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\LogicController.cs",
+              "RelativeToolTip": "PacMan\\Controllers\\LogicController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAjwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T21:40:59.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DisplayController.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\DisplayController.cs",
+              "RelativeDocumentMoniker": "PacMan\\Controllers\\DisplayController.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\DisplayController.cs",
+              "RelativeToolTip": "PacMan\\Controllers\\DisplayController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswBcAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T21:01:47.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameSettings.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Constants\\GameSettings.cs",
+              "RelativeDocumentMoniker": "PacMan\\Constants\\GameSettings.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Constants\\GameSettings.cs",
+              "RelativeToolTip": "PacMan\\Constants\\GameSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T19:30:28.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AssetsPathes.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Constants\\AssetsPathes.cs",
+              "RelativeDocumentMoniker": "PacMan\\Constants\\AssetsPathes.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Constants\\AssetsPathes.cs",
+              "RelativeToolTip": "PacMan\\Constants\\AssetsPathes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T19:53:54.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MapsStorage.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Storages\\MapsStorage.cs",
+              "RelativeDocumentMoniker": "PacMan\\Storages\\MapsStorage.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Storages\\MapsStorage.cs",
+              "RelativeToolTip": "PacMan\\Storages\\MapsStorage.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T22:16:29.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Model.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Assets\\Model.cs",
+              "RelativeDocumentMoniker": "PacMan\\Assets\\Model.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Assets\\Model.cs",
+              "RelativeToolTip": "PacMan\\Assets\\Model.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAIA+wBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T18:54:28.369Z",
               "EditorCaption": ""
             }
           ]

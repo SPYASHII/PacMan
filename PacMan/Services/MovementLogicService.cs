@@ -52,7 +52,7 @@ namespace PacMan.Services
             bool move = CollideLogic(moveble, entity); 
 
             if (move)
-                moveble.Move(Constants.movementStep);
+                moveble.Move(GameSettings.movementStep);
         }
         //Получение сущности с места куда планируется сделать шаг
         private IEntity GetEntityFromDirection(Directions dir, Coordinates coords)

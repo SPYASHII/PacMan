@@ -1,4 +1,5 @@
-﻿using PacMan.Structures;
+﻿using PacMan.Assets;
+using PacMan.Structures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace PacMan.Interfaces
 {
     internal interface IDisplayModel
     {
-        void DisplayAt(Coordinates cords, char model);
+        void DisplayAt(Coordinates cords, Model model);
     }
 }

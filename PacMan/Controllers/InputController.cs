@@ -27,9 +27,14 @@ namespace PacMan.Controllers
 
             return _instance;
         }
-        public static InputController? GetInstance()
+        public static InputController? GetInstance(out bool notNull)
         {
-            return _instance;
+            if(_instance == null)
+                notNull = false;
+            else
+                notNull = true;
+
+                return _instance;
         }
 
         public Controls GetControlOnAvailable()
