@@ -20,10 +20,13 @@ namespace PacMan.Services
         {
             DisplayAt(cords, ' ');
         }
-        public void DisplayWin()
+        public void DisplayMessage(string message)
+        {
+            Console.WriteLine(message);
+        }
+        public void Clear()
         {
             Console.Clear();
-            Console.WriteLine("You have won!");
         }
     }
 }

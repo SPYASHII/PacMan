@@ -42,9 +42,16 @@ namespace PacMan.Controllers
 
             _displayService.DisplayAt(entity.Coordinates, model);
         }
-        public void DisplayWin()
+        public void DisplayWinScenario()
         {
-            _displayService.DisplayWin();
+            var builder = new StringBuilder();
+
+            builder.AppendLine("You have won!");
+            builder.AppendLine();
+            builder.AppendLine("Press Enter to restart");
+
+            _displayService.Clear();
+            _displayService.DisplayMessage(builder.ToString());
         }
     }
 }

@@ -13,20 +13,41 @@ namespace PacMan.Controllers
     {
         private IInputParse inputParser;
 
-        public InputController(IInputParse inputParser)
+        private static InputController _instance;
+        //private InputController() { }
+        private InputController(IInputParse inputParser)
         {
             this.inputParser = inputParser;
         }
-        public Controls GetControl()
+
+        public static InputController Init(IInputParse inputParser)
+        {
+            if(_instance == null)
+                _instance = new InputController(inputParser);
+
+            return _instance;
+        }
+        public static InputController? GetInstance()
+        {
+            return _instance;
+        }
+
+        public Controls GetControlOnAvailable()
         {
             Controls control = Controls.None;
             
             if (Console.KeyAvailable)
             {
-                var key = Console.ReadKey(true);
-
-                control = inputParser.ParseFromKeyToControl(key.Key);
+                control = GetControl();
             }
+
+            return control;
+        }
+        public Controls GetControl()
+        {
+            var key = Console.ReadKey(true);
+
+            var control = inputParser.ParseFromKeyToControl(key.Key);
 
             return control;
         }

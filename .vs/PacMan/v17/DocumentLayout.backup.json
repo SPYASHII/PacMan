@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\controllers\\logiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\controllers\\logiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\storages\\mapsstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\storages\\mapsstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\controllers\\inputcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\controllers\\inputcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\controllers\\logiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\controllers\\logiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\constants\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\constants\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|d:\\programming\\cbs\\3 course (essential)\\pacman\\pacman\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80ED441A-6204-4820-BB8F-B76C6A23C282}|PacMan\\PacMan.csproj|solutionrelative:pacman\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,62 +26,63 @@
       "DocumentGroups": [
         {
           "DockedHeight": 681,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LogicController.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\LogicController.cs",
+              "RelativeDocumentMoniker": "PacMan\\Controllers\\LogicController.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\LogicController.cs",
+              "RelativeToolTip": "PacMan\\Controllers\\LogicController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAqwFUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T12:57:36.218Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LogicController.cs",
-              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\LogicController.cs",
-              "RelativeDocumentMoniker": "PacMan\\Controllers\\LogicController.cs",
-              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\LogicController.cs",
-              "RelativeToolTip": "PacMan\\Controllers\\LogicController.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MapsStorage.cs",
+              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Storages\\MapsStorage.cs",
+              "RelativeDocumentMoniker": "PacMan\\Storages\\MapsStorage.cs",
+              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Storages\\MapsStorage.cs",
+              "RelativeToolTip": "PacMan\\Storages\\MapsStorage.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T18:14:35.958Z",
+              "WhenOpened": "2025-04-17T13:18:08.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "InputController.cs",
               "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\InputController.cs",
               "RelativeDocumentMoniker": "PacMan\\Controllers\\InputController.cs",
               "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Controllers\\InputController.cs",
               "RelativeToolTip": "PacMan\\Controllers\\InputController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwC8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T18:14:34.73Z",
+              "WhenOpened": "2025-04-17T12:45:18.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Constants.cs",
-              "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Constants\\Constants.cs",
-              "RelativeDocumentMoniker": "PacMan\\Constants\\Constants.cs",
-              "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Constants\\Constants.cs",
-              "RelativeToolTip": "PacMan\\Constants\\Constants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T16:34:28.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Game.cs",
               "DocumentMoniker": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Game.cs",
               "RelativeDocumentMoniker": "PacMan\\Game.cs",
               "ToolTip": "D:\\Programming\\CBS\\3 course (Essential)\\PacMan\\PacMan\\Game.cs",
               "RelativeToolTip": "PacMan\\Game.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwCUAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T16:33:47.669Z",
+              "WhenOpened": "2025-04-13T14:10:01.134Z",
               "EditorCaption": ""
             }
           ]

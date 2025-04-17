@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace PacMan.Interfaces
 {
-    internal interface IDisplayNotifications
+    internal interface IDisplayMessage
     {
-        void DisplayWin();
+        void DisplayMessage(string message);
     }
 }

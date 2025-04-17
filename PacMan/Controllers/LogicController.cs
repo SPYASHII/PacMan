@@ -1,6 +1,8 @@
 ﻿using PacMan.Entities;
 using PacMan.Enums;
+using PacMan.Handlers;
 using PacMan.Interfaces;
+using PacMan.Managers;
 using PacMan.Services;
 using PacMan.Structures;
 using System;
@@ -16,50 +18,64 @@ namespace PacMan.Controllers
     {
         private LevelController _levelController;
         private DisplayController _displayController;
+
         private MovementLogicService _movementLogic;
 
-        public LogicController()
+        private CollisionHandler _collisionHandler;
+        private ControlsHandler _controlsHandler;
+
+        private GameStateManager _gameStateManager;
+
+        public LogicController(GameStateManager gameStateManager)
         {
             IDisplayService displayService = new DisplayService();
 
             _displayController = new DisplayController(displayService);
             _levelController = new LevelController();
+
+            _collisionHandler = new CollisionHandler(_entitiesChanged);
+
+            _collisionHandler.GameOver += OnExit;
+            _collisionHandler.LevelPassed += OnLevelPassed;
+
+            _controlsHandler = new ControlsHandler(OnExit, OnRestart, OnPause);
+
+            _gameStateManager = gameStateManager;
         }
 
         //Лист существ которых нужно отобразить(которые подверглись изменениям)
         private List<IEntity> _entitiesChanged = new List<IEntity>();
 
-        public bool pause = false;
-        public bool win = false;
-        public bool exit = false;
         private bool _levelPassed = false;
         //alpha test 1       
         //Первоначальная настройка логики при новом уровне
         public void Setup()
         {
+            _gameStateManager.SetDefaultState();
+
             _levelPassed = false;
 
             SetCoordinatesForEntities();
 
             var level = _levelController.GetCurrentLevel();
 
-            _movementLogic = new MovementLogicService(level, CollideWithLogic);
+            _movementLogic = new MovementLogicService(level, _collisionHandler.CollideWithLogic);
 
             _displayController.DisplayAllMap(level.Map);
         }
         //Логика каждой "итерации" игры
         public void ProcessLogic(Controls input)
         {
-            HandleControls(input);
+            _controlsHandler.HandleControls(input, _levelController.GetCurrentLevel().Player);
 
-            if (!pause)
+            if (!_gameStateManager.Pause && !_gameStateManager.Win)
             {
                 _entitiesChanged.Clear();
 
                 _movementLogic.PlayerMoveLogic();
                 _movementLogic.EnemyMoveLogic();
 
-                if (!exit)
+                if (!_gameStateManager.Win)
                 {
                     //Обработка изменненных сущностей
                     _levelController.InsertEntities(_entitiesChanged); //Фактическое помещение на карту уровня
@@ -69,14 +85,11 @@ namespace PacMan.Controllers
                     {
                         LevelLogic();
                     }
-
-                    if (win)
-                    {
-                        _displayController.DisplayWin();
-                        Console.ReadKey();
-                        win = false;
-                    }
                 }
+            }
+            if(_gameStateManager.Win)
+            {
+                _displayController.DisplayWinScenario();
             }
         }
         private void LevelLogic()
@@ -86,41 +99,9 @@ namespace PacMan.Controllers
             if (isNextLevel)
                 Setup();
             else
-                win = true;
+                _gameStateManager.SetWin();
         }
-        //Обработка нажатий на клавиатуру
-        private void HandleControls(Controls input)
-        {
-            var player = _levelController.GetCurrentLevel().Player;
-
-            switch (input)
-            {
-                case Controls.Up:
-                    player.NextDirection = Directions.Up;
-                    break;
-                case Controls.Down:
-                    player.NextDirection = Directions.Down;
-                    break;
-                case Controls.Left:
-                    player.NextDirection = Directions.Left;
-                    break;
-                case Controls.Right:
-                    player.NextDirection = Directions.Right;
-                    break;
-                case Controls.Exit:
-                    exit = true;
-                    break;
-                case Controls.Restart:
-                    _levelController.FirstLevel();
-                    Setup();
-                    break;
-                case Controls.Pause:
-                    pause = !pause;
-                    break;
-                default:
-                    break;
-            }
-        }
+        
         //Установить координаты всем сущностям на карте
         private void SetCoordinatesForEntities()
         {
@@ -134,93 +115,26 @@ namespace PacMan.Controllers
                 }
             }
         }
-        //Логика взаимодействия между сущностями при движении,
-        //возращаемое значение - сигнал двигатся сущности или нет
-        private bool CollideWithLogic(IEntity iniciator, IEntity colidedWith)
+        private void OnExit(object? sender, EventArgs e)
         {
-            bool move = false;
-
-            if (iniciator is Player player)
-                move = PlayerCollide(player, colidedWith);
-            else if (iniciator is Enemy enemy)
-                move = EnemyCollide(enemy, colidedWith);
-
-            return move;
+            _gameStateManager.SetExit();
         }
-        private bool EnemyCollide(Enemy enemy, IEntity colidedWith)
+        private void OnLevelPassed(object? sender, EventArgs e)
         {
-            bool move = false;
-
-            if (colidedWith is Wall)
-            {
-                enemy.ChangeDirection();
-            }
-            else if (colidedWith is Player)
-            {
-                exit = true;
-            }
-            else if (colidedWith is Enemy)
-            {
-                //do nothing
-            }
-            else
-            {
-                //POINT AND EMPTY SPACE
-                //swap
-                SecondTakePlaceOfFirst(enemy, colidedWith);
-
-                move = true;
-            }
-
-            if (move)
-                _entitiesChanged.Add(enemy);
-
-            return move;
+            _levelPassed = true;
         }
-        private bool PlayerCollide(Player player, IEntity colidedWith)
+        private void OnRestart(object? sender, EventArgs e)
         {
-            bool move = false;
-
-            if (colidedWith is Point)
-            {
-                //TODO: POINTS/SCORE
-                //delete point and add to score
-                //set empty space on spot before
-                SecondTakePlaceOfFirst(player, new EmptySpace());
-
-                move = true;
-            }
-            else if (colidedWith is Wall)
-            {
-                //do nothing
-            }
-            else if (colidedWith is Enemy)
-            {
-                exit = true;
-            }
-            else if (colidedWith is Exit)
-            {
-                //some logic
-                _levelPassed = true;
-            }
-            else
-            {
-                //EMPTY SPACE
-                SecondTakePlaceOfFirst(player, colidedWith);
-
-                move = true;
-            }
-
-            if (move)
-                _entitiesChanged.Add(player);
-
-            return move;
+            Restart();
         }
-        //Метод для задания второй сущности координат первой + добавление в список измененных сущностей
-        private void SecondTakePlaceOfFirst(IEntity first, IEntity second)
+        private void Restart()
         {
-            second.SetCoordinates(first.Coordinates.X, first.Coordinates.Y);
-            _entitiesChanged.Add(second);
+            _levelController.FirstLevel();
+            Setup();
+        }
+        private void OnPause(object? sender, EventArgs e)
+        {
+            _gameStateManager.SwitchPause();
         }
     }
 }

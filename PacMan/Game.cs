@@ -1,6 +1,8 @@
 ﻿using PacMan.Assets;
 using PacMan.Controllers;
+using PacMan.Enums;
 using PacMan.Interfaces;
+using PacMan.Managers;
 using PacMan.Services;
 using System;
 using System.Collections.Generic;
@@ -14,12 +16,15 @@ namespace PacMan
     {
         private InputController _inputController;
         private LogicController _logicController;
+        private GameStateManager _gameStateManager;
         public Game()
         {
             IInputParse inputParser = new InputParserService();
 
-            _inputController = new InputController(inputParser);
-            _logicController = new LogicController();
+            _gameStateManager = new GameStateManager();
+
+            _inputController = InputController.Init(inputParser);
+            _logicController = new LogicController(_gameStateManager);
         }
         public void Start()
         {
@@ -30,9 +35,13 @@ namespace PacMan
         }
         private void GameLoop()
         {
-            while (!_logicController.exit)
+            while (!_gameStateManager.Exit)
             {
-                var control = _inputController.GetControl();
+                Controls control;
+                if (_gameStateManager.Win)
+                    control = _inputController.GetControl();
+                else
+                    control = _inputController.GetControlOnAvailable();
 
                 Thread.Sleep(250);
 
